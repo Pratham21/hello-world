@@ -6,5 +6,29 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-}
+// courses; 
+// loadCourses(){
+// this.courses=[
+// {id:1 , name:'course1'},
+// {id:2 , name:'course2'},
+// {id:3 , name:'course3'},
+// ];
+
+// }
+// trackCourse(index,course){
+//   return course ? course.id : undefined;
+// }
+// onAdd(){
+//   this.courses.push({id:4,name:'course4'});
+//   //this.courses.push({id:5,name:'course5'});
+// }
+// onRemove(course){
+//   let index=this.courses.indexOf(course);
+//   this.courses.splice(index,1);
+// }
+// onUpdate(course){
+  
+//   course.name='Updated';
+// }
+
+ }

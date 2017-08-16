@@ -1,0 +1,88 @@
+<form [formGroup]="form">
+<navbar ng-transclude> HELLO</navbar>
+
+
+<div class="ngContainer">
+  <h3>Login Page</h3>
+  <p>Please enter login details below</p>
+</div>
+
+    <div *ngIf="form.errors" class="alert alert-danger">
+        The username or password is invalid.
+    </div> 
+    <div formGroupName="account">
+        <div class="form-group">
+            <label for="Name">Name</label>
+                <input type="text"
+                    formControlName="Name"
+                    id="Name" 
+                    type="text" 
+                    class="form-control">
+
+        </div>
+
+     <div class="form-group">
+        <label for="username">Username</label> 
+         <input 
+            formControlName="username"
+            id="username" 
+            type="text" 
+            class="form-control"> 
+        
+          <div *ngIf="username.pending">  <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>Checking for Uniqueness..</div> 
+     <div *ngIf="username.touched && username.invalid" class="alert alert-danger">
+            <div *ngIf="username.errors.required">Username is required</div>
+            <div *ngIf="username.errors.minlength">Username should be minimum {{username.errors.minlength.requiredLength}} characters</div>
+            <div *ngIf="username.errors.cannotContainSpace">Username cannot contain space</div>
+            <div *ngIf="username.errors.shouldBeUnique">Username is already taken</div>
+    </div> 
+    </div>
+
+     <div class="form-group">
+            <label for="Email">Email</label>
+                <input type="text"
+                    formControlName="Email"
+                    id="Email" 
+                    type="text" 
+                    class="form-control">
+
+        </div>
+
+
+
+
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+            formControlName="password"
+            id="password" 
+            type="text" 
+            class="form-control">
+    </div>
+
+
+      <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+                <input type="text"
+                    formControlName="confirmPassword"
+                    id="confirmPassword" 
+                    type="text" 
+                    class="form-control">
+
+        </div>
+
+    <button class="btn btn-primary" type="submit">Submit</button> 
+
+    <footer>  
+    <div class="container">
+    <a class="logo-font" routerLink="/">conduit</a>
+    <span class="attribution">
+      &copy; {{ today | date: 'yyyy' }}.
+      An interactive learning project from <a href="https://thinkster.io">Thinkster</a>.
+      Code licensed under MIT.
+    </span>
+  </div> 
+</footer>
+</div>
+</form>
