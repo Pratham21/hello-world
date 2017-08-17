@@ -3,23 +3,18 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'footer',
   template: `
-        <h1 class="footer">Contact us: m2k17@miraclesoft.com</h1>
-        <div class="container">
-    <a class="logo-font" routerLink="/">conduit</a>
+        <h5 class="text-muted" align ="center">Contact: support@miraclesoft.com</h5>
+        <div class="ngContainer" align ="center" >
+    <a class="logo-font" routerLink="/"></a>
     <span class="attribution">
       &copy; {{ today | date: 'yyyy' }}.
-      An interactive learning project from <a href="https://thinkster.io">Thinkster</a>.
-      Code licensed under MIT.
+     Copyright<a href="http://www.miraclesoft.com/">Miracle</a>.
+      
     </span>
   </div> 
   `,
   styleUrls: []
 })
-export class FooterComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class FooterComponent {
+today: number = Date.now();
 }
