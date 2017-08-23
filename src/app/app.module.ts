@@ -16,6 +16,7 @@ import { InputFormatDirective } from "./input-format.directive";
 import { ZippyComponent } from "./zippy/zippy.component";
 import { AppComponent } from "./app.component";
 import { LikeComponent } from "./like/like.component";
+import { SignupComponent } from "./signup-form/SignupModal.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { LikeComponent } from "./like/like.component";
     PostsComponent,
     FooterComponent,
     ConfirmComponent,
-    NavbarComponent
+    NavbarComponent,
+    SignupComponent
     
     
 

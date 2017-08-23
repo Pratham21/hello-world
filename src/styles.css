@@ -32,20 +32,28 @@
 .navbar {
  /* border-bottom: 1px solid #eee; */
 }
-
+.brand-name {
+font-family: 'Josefin Slab', serif;
+font-size: 20px;
+font-weight: bold;
+color: #444;
+text-decoration: none;
+padding: 0px;
+margin: 10px 30px 5px 2px;
+}
 .navigation {
     width: 20%;
     text-align: center;
     background-color: #CEE3F6;
     vertical-align:bottom;
     line-height:5px;
-    height:5px;
+    height:10px;
 }
 
 #nav-list li {
     display: inline-block;
     font-size: 12px;
-    margin: 10px;
+    margin: 20px;
     vertical-align:bottom;
     line-height:normal;   
 }
